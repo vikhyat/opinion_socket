@@ -7,3 +7,17 @@ Creating a new poll
 1. Execute `rake new_poll[Summer Vacation Proposal]`.
 2. Edit the file created in polls/ to add the desired description and the HTML
    for the form.
+
+enrollments.yaml
+----------------
+
+This file contains the enrollment numbers of various students, split into
+various groups.
+
+Example:
+
+    ---
+    btech2011:
+      - b11018
+
+

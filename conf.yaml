@@ -1,2 +1,10 @@
 ---
-secret: cadksly*dshfa$lfdakjdsbklvv89Gw9dyce8BU89yf28398&^31bfjskh
+:secret: cadksly*dshfa$lfdakjdsbklvv89Gw9dyce8BU89yf28398&^31bfjskh
+:email:
+  :sender: you@example.com
+  :smtp:
+    :address: students.iitmandi.ac.in
+    :port: 25
+    :user_name: REDACTED
+    :password: REDACTED
+    :authentication: plain

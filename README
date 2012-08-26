@@ -27,4 +27,13 @@ conf.yaml
 Below is a list of supported configuration variables and their function:
 
 * secret: used for generating the unique tokens.
-
+* email:
+  * sender: email address from which emails should be sent.
+  * smtp: (all the options below are optional)
+    * address:
+    * port:
+    * user_name:
+    * password:
+    * authentication:
+    * domain:
+    

@@ -1,5 +1,6 @@
 require 'yaml'
 
+desc "create a new poll"
 task :new_poll, :title do |t, args|
   # Get the filename by downcasing and replacing whitespace with _s.
   filename = args[:title].downcase.gsub(/\s+/, '_') + '.yaml'

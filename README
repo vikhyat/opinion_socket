@@ -1,44 +1,24 @@
 opinion_socket
 ==============
 
-Creating a new poll
--------------------
+Opinion Socket is a software package that is designed to help with gauging the
+opinion of a large number of people over the internet.
 
-1. Execute `rake new_poll[Poll Title]`.
-2. Edit the file created in polls/ to add the desired description and the HTML
-   for the form.
+It was originally designed to make it possible to collect the opinion of
+students at IIT Mandi on various issues.
 
-Sending out emails for a poll
------------------------------
+Usage
+-----
 
-1. Make sure enrollments.yaml is filled out correctly.
-2. Execute `rake send_emails[Poll Title]`.
+1. Create a new poll, by running `rake new_poll[Poll Title]` and then editing
+the file created in the polls/ directory to add details.
+2. Send out emails to all students registered by their enrollment numbers in 
+enrollments.yaml by running `rake send_emails[Poll Title]`.
+3. Give people some time to fill out the form.
+4. Run `rake generate_csv` to generate a CSV file with the results of the poll.
+This file can be opened using any spreadsheet software package.
 
-enrollments.yaml
-----------------
+License
+-------
 
-This file contains a list of enrollment numbers of all the students.
-
-Example:
-
-    ---
-    - b11018
-
-
-conf.yaml
----------
-
-Below is a list of supported configuration variables and their function:
-
-* secret: used for generating the unique tokens.
-* email:
-  * sender: email address from which emails should be sent.
-  * smtp: (all the options below are optional)
-    * address:
-    * port:
-    * user_name:
-    * password:
-    * authentication:
-    * domain:
-* base_url: base url of the web application.
-    
+This software package is licensed under the three-clause BSD license.

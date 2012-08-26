@@ -21,3 +21,10 @@ Example:
       - b11018
 
 
+conf.yaml
+---------
+
+Below is a list of supported configuration variables and their function:
+
+* secret: used for generating the unique tokens.
+

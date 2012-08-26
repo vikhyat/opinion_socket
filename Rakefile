@@ -52,7 +52,7 @@ task :send_emails, :title do |t, args|
 Please fill out your opinions regarding #{args[:title]} by opening the
 following link:
 
-#{base_url}/#{filename[0..-6]}/#{token(enrollment, filename)}
+#{base_url}/#{filename[0..-6]}/#{token(enrollment, filename)}/#{enrollment}
 
 Thank you for your cooperation.")
   end

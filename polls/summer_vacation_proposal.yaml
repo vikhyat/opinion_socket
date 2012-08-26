@@ -1,4 +1,28 @@
 ---
 title: Summer Vacation Proposal
-description: ''
-form: ''
+description: |
+  <p>
+  There is a proposal for increasing the number of days in the summer vacations
+  by around two weeks. As each quiz in a semester takes 3 complete days. 
+  Therefore, in a semester we have 6 days completely dedicated to quizzes with
+  no class hours. Now, the proposal is to shift back to the former quiz pattern
+  of having each quiz on a single day with regular commencement of classes; so 
+  that these six days could be used as for vacation. Now, in this respect; two
+  steps could be taken up:
+  </p>
+  <ol>
+    <li>6 days of this semester could be put up together with winter vacations;
+    which could add up to 12 weeks of winter break.</li>
+    <li>12 days of two semesters could be put together with the summers; which
+    could add up to close to 7 weeks of summer vacations. Decision over the 
+    above points will be taken up later when students agree with this
+    proposal.</li>
+  </ol>
+form: |
+  <p style="margin-bottom: 7px">Are you in support of this proposal?</p>
+  <ul>
+    <li><label><input type="radio" name="support" value="yes"> Yes</label></li>
+    <li><label><input type="radio" name="support" value="no"> No</label></li>
+  </ul>
+  <p style="margin-bottom: 7px">Reason for your choice:</p>
+  <textarea name="reason"></textarea>

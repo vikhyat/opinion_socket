@@ -1,4 +1,5 @@
 require 'yaml'
+require 'csv'
 require './lib/token.rb'
 require './lib/email.rb'
 
@@ -55,5 +56,38 @@ following link:
 #{base_url}/#{filename[0..-6]}/#{token(enrollment, filename)}/#{enrollment}
 
 Thank you for your cooperation.")
+  end
+end
+
+desc "generate the CSV files for all polls"
+task :generate_csv do
+  polls = Dir.glob("results/*").map {|x| x.split('/')[-1] }
+  polls.each do |poll|
+    results = {}
+    filtered_results = {}
+    voted = Dir.glob("results/#{poll}/*").map {|x| x.split('/')[-1] }
+    voted.each do |voter|
+      res = YAML.load(File.read "results/#{poll}/#{voter}")
+      keys = res.keys
+      keys -= ["filename", "token", "submit", "splat",
+               "captures", "filename_url"]
+      results[voter] = {}
+      keys.each do |key|
+        results[voter][key] = res[key]
+      end
+    end
+
+    headers = results.map {|k,v| v.keys }.flatten.uniq
+
+    csv = CSV.generate do |csv|
+      csv << headers
+      results.each do |enrl, res|
+        a = []
+        headers.each {|h| a << res[h] }
+        csv << a
+      end
+    end
+
+    File.open("results/#{poll}.csv", 'w') {|f| f.puts csv }
   end
 end

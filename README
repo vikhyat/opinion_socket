@@ -11,14 +11,12 @@ Creating a new poll
 enrollments.yaml
 ----------------
 
-This file contains the enrollment numbers of various students, split into
-various groups.
+This file contains a list of enrollment numbers of all the students.
 
 Example:
 
     ---
-    btech2011:
-      - b11018
+    - b11018
 
 
 conf.yaml
@@ -36,4 +34,5 @@ Below is a list of supported configuration variables and their function:
     * password:
     * authentication:
     * domain:
+* base_url: base url of the web application.
     

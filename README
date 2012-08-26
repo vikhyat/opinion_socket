@@ -4,9 +4,15 @@ opinion_socket
 Creating a new poll
 -------------------
 
-1. Execute `rake new_poll[Summer Vacation Proposal]`.
+1. Execute `rake new_poll[Poll Title]`.
 2. Edit the file created in polls/ to add the desired description and the HTML
    for the form.
+
+Sending out emails for a poll
+-----------------------------
+
+1. Make sure enrollments.yaml is filled out correctly.
+2. Execute `rake send_emails[Poll Title]`.
 
 enrollments.yaml
 ----------------
